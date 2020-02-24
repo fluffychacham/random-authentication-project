@@ -1,0 +1,101 @@
+
+form.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    
+    label.login-form-label {
+        position: relative;
+        color: #fff;
+        font-weight: 500;
+        padding-bottom: 0.3rem;
+        margin-top: 60px;
+        height: 1.2rem;
+
+        span {
+            transition: all 0.5s ease;
+            opacity: 0.3;
+        }
+
+        input.login-form-input {
+            opacity: 1;
+            width: calc(100% - 30px);
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 1.2rem;
+            transition: all 0.5s ease;
+            outline: none; 
+            border-bottom: 2px solid #120c22;
+            height: 1.5rem;
+            padding-right: 9px;
+        }
+        img {
+            width: 15px;
+            position: absolute;      
+            bottom: -1rem;
+            right: 0;
+            transition: all 0.5s ease;
+            opacity: 0.5;
+            filter: brightness(0) invert(1);
+            
+            &.valid {
+                filter: none;
+                opacity: 1;
+            }
+        }
+        
+        &.highlight {
+            span {
+                opacity: 0.8;
+                font-size: 80%;
+            }
+            input.login-form-input {
+                border-bottom: 2px solid #fff;
+            } 
+        }
+    }
+
+    input.login-form-submit {
+        text-transform: uppercase;
+        display: block;
+        margin: 0 auto;
+        background-color: #fff;
+        width: 65%;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 30px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-top: 90px;
+        transition: all 0.3s ease;
+        
+        &:hover, &:active, &:focus {
+            filter: brightness(110%);
+            box-shadow: 0px 0px 10px #fff;
+            cursor: pointer;
+            outline: none;
+            transform: scale(1.05, 1.05);
+        }
+    }
+}
+
+div.login-form-password-reset {
+    color: #fff;
+    margin-top: 60px;
+    span {
+        opacity: 0.3;
+    }
+    a {
+        margin-left: 10px;
+        color: #fff;
+        opacity: 1;
+        text-decoration: none;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        &:hover {
+            color: #77c92b;
+        }
+    }
+}
